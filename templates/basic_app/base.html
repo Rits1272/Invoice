@@ -5,22 +5,44 @@
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
     <title>Invoice</title>
+
   </head>
   <body>
 
     {% block content %}
     <div class = 'container' center='align'>
+        <table border='1'>
+          <tr style='padding:5px'>
+            <td>
+               GSTN - 23AHLPJ5473A1ZM<br>
+               DL No. - 21/B225047/2019
+               <center>
+                 <h5><u>TAX INVOICE</u></h5>
+                 <h2><b>S.K. MARKETING</b></h2>
+                 <h5>02, VINDHYA ORCHIDS, BESIDE MAHARISHI SCHOOL, LAMTI, VIJAYNAGAR, JABALPUR(M.P) 482002</h5>
+                 <h6>Email : <b>skmarketing@gmail.com</b>
+               </center>
+            </td>
+          </tr>
+        </table>
 
-      <table border="1">
-        <tbody>
-
-              <h5 align='center'><u>INVOICE</u></h5>
-              <h2 align='center'>S.K MARKETING</h2>
-              <h6 align='center'>02, VINDHYA ORCHIDS, BESIDE MAHARISHI SCHOOL, LAMTI, VIJAYNAGAR, JABALPUR(M.P) 482002</h6>
-              <h6 align='center'>Email : <b>skmarketing4@gmail.com</b></h6>
-      
-        </tbody>
-            <thead>
+        <table border='1'>
+          <tr style='padding:5px;'>
+              <td>M/s Dinesh Patel
+              <br>JABALPUR<br><br>
+              Mobile: 9424913170<br>
+              GSTN:<br>
+              DL No:</td>
+              <td>
+              Invoice no. :<br>
+              Date:<br>
+              Challan No.
+            </td>
+            </tr>
+            <tr><td></td></tr>
+        </table>
+      <table border='1'>
+        <thead>
          <tr style='padding:5px'>
            <th>S.No</th>
            <th>Description</th>
@@ -54,6 +76,32 @@
          </tr>
        </tbody>
          {% endfor %}
+     </table>
+     <table border='1' style="padding:10px;">
+       <tr style='padding:5px;'>
+         <td style='margin-right:50px;' align='right'>
+           Total : <br>
+           GST @ 12% <br>
+           Grand Total : <br>
+           R/O
+         </td>
+       </tr>
+     </table>
+     <table border='1'>
+       <tr style='padding:3px;'>
+         <td align='center'><h5>AMOUNT(in words)</h5></td>
+         <td>Rs. One thousand and Ninety Nine</td>
+       </tr>
+       <tr style="padding:5px;">
+         <td><u><b>Terms and Conditions</b></u><br>
+          <ol>
+            <li>All disputes subject to JABALPUR jurisdiction only</li>
+            <li>Interest @24% p.a. will be changed if that bill is not paid within 7days</li>
+            <li>Our responsibility ceases as soon as goods are delivered to the carriers</li>
+          </ol>
+         </td>
+         <td><b>For : S.K. MARKETING</b></td>
+       </tr>
      </table>
      </div>
      {% endblock %}

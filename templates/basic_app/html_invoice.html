@@ -9,9 +9,10 @@
   <body>
 
     {% block content %}
-    <div class = 'container table-responsive' center='align'>
 
-      <table class='table'>
+    <div class = 'container table-responsive-sm table-hover' center='align' style='margin-top:3%;'>
+    
+       <table class='table'>
         <!-- <tbody>
           <td>
               <h5 align='center'><u>INVOICE</u></h5>
@@ -20,7 +21,7 @@
               <h6 align='center'>Email : <b>skmarketing4@gmail.com</b></h6>
           </td>
         </tbody> -->
-            <thead>
+            <thead class='thead-dark'>
          <tr style='padding:5px'>
            <th>S.No</th>
            <th>Description</th>
@@ -56,7 +57,13 @@
          {% endfor %}
      </table>
      </div>
-     <div class = 'jumbotron' align='center'><a class = 'btn btn-danger' href="{% url 'base' %}">PDF</a></div>
+     <div class = 'container' align='center'>
+       <div class = 'btn-group'>
+         <a href="{% url 'base' %}" align='center' class="btn btn-outline-dark ">PDF</a>
+         <a href="{% url 'post' %}" class="btn btn-outline-dark ">ADD</a>
+      </div>
+     </div>
+
       {% endblock %}
   </body>
 </html>
